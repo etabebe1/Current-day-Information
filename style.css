@@ -7,7 +7,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, rgb(113, 113, 212), rgb(8, 179, 74));
+  background: linear-gradient(to bottom, #2987e4 50%, #16191e 50%);
   height: 100vh;
   /* min-width: 454px; */
 }
@@ -15,12 +15,62 @@ body {
 .info {
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 50%;
+  top: 43%;
   left: 50%;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 30px;
+}
+
+.analog-clock {
+  width: 17rem;
+  height: 17rem;
+
+  background: #16191e;
+  border: 10px solid #22272f;
+  border-radius: 50%;
+  box-shadow: 10px 10px 35px #16191e, inset 10px 10px 35px #1e1616,
+    inset -10px -10px 35px #1e1616;
+}
+
+.Hr {
+  width: 7px;
+  height: 50px;
+  background: white;
+  top: 85px;
+}
+
+.Min {
+  width: 5px;
+  height: 70px;
+  background: #2c3f26;
+  top: 65px;
+}
+.Sec {
+  width: 3px;
+  height: 80px;
+  background: #2987e4;
+  top: 55px;
+}
+
+.stroke {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  transform-origin: bottom;
+  border-radius: 5px;
+}
+
+.analog-clock img {
+  height: 18rem;
+  width: 18rem;
+  position: relative;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 }
 
 .hr-info {

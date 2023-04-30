@@ -44,3 +44,23 @@ function animationFrame() {
   year.innerHTML = date.getFullYear();
 }
 animationFrame();
+
+const getTime = setInterval(() => {
+  const Hr = document.querySelector(".Hr");
+  const Min = document.querySelector(".Min");
+  const Sec = document.querySelector(".Sec");
+
+  let time = new Date();
+
+  let strokeHr = time.getHours();
+  let strokeMin = time.getMinutes();
+  let strokeSec = time.getSeconds();
+
+  let calc_hr = strokeHr * 30 + strokeMin / 2;
+  let calc_min = strokeMin * 6 + strokeSec / 10;
+  let calc_sec = strokeSec * 6;
+
+  Hr.style.transform = `rotate(${calc_hr}deg)`;
+  Min.style.transform = `rotate(${calc_min}deg)`;
+  Sec.style.transform = `rotate(${calc_sec}deg)`;
+}, 1000);
